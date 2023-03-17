@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.ParticipannuleController">
+   <children>
+      <ImageView fitHeight="567.0" fitWidth="171.0" layoutX="-2.0" layoutY="-8.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@309718047_3247791828796491_6017093170681667861_n.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="homepartannul" layoutX="12.0" layoutY="153.0" mnemonicParsing="false" onAction="#doclickhomepartannul" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="HTABV2" layoutX="172.0" layoutY="35.0" onMouseClicked="#remplire_update" prefHeight="407.0" prefWidth="714.0">
+         <columns>
+            <TableColumn fx:id="aff_datedb2" prefWidth="78.4000244140625" text="Date debut" />
+            <TableColumn fx:id="aff_datefin2" prefWidth="59.199951171875" text="Date Fin" />
+            <TableColumn fx:id="aff_lib2" prefWidth="58.4000244140625" text="Libelle" />
+            <TableColumn fx:id="aff_heuredb2" prefWidth="86.39996337890625" text="Heure Debut" />
+            <TableColumn fx:id="aff_heurefin2" prefWidth="68.79995727539062" text="Heure Fin" />
+            <TableColumn fx:id="aff_nbplc2" prefWidth="65.5999755859375" text="N°Places " />
+            <TableColumn fx:id="aff_prix1" prefWidth="92.00006103515625" text="Prix d'entrée" />
+            <TableColumn fx:id="aff_flyer2" prefWidth="85.60003662109375" text="Flyer" />
+            <TableColumn fx:id="aff_video2" prefWidth="151.9998779296875" text="Video" />
+            <TableColumn fx:id="idev2" prefWidth="176.7999267578125" text="ID" visible="false" />
+         </columns>
+      </TableView>
+      <Button layoutX="779.0" layoutY="496.0" mnemonicParsing="false" onAction="#annulerpart2" prefHeight="40.0" prefWidth="106.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Annuler" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="RETparticip" layoutX="172.0" layoutY="496.0" mnemonicParsing="false" onAction="#doclickRETparticip" prefHeight="40.0" prefWidth="132.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="RETOUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="annullepartlabel" layoutX="261.0" layoutY="454.0" prefHeight="18.0" prefWidth="548.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="153.0" fitWidth="171.0" layoutX="1.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@308181173_3429967987279219_7821870094501611281_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="refrech" layoutX="13.0" layoutY="265.0" mnemonicParsing="false" onAction="#doclickrefrech" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="Your Events " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Topartaffiche" layoutX="12.0" layoutY="209.0" mnemonicParsing="false" onAction="#doclickTopartaffiche" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" stylesheets="@homesociete.css" text="Events List" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

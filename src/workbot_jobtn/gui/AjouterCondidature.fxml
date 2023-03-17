@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: 0000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.AjouterCondidatureController">
+   <children>
+      <Label fx:id="labeldescription" layoutX="319.0" layoutY="122.0" prefHeight="41.0" prefWidth="125.0" text="Label" textFill="#020824">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeltitre" layoutX="224.0" layoutY="16.0" prefHeight="30.0" prefWidth="83.0" text="titre  :">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeldurée" layoutX="877.0" layoutY="142.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelanneeexperience" layoutX="615.0" layoutY="107.0" prefHeight="30.0" prefWidth="149.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeldomaine" layoutX="319.0" layoutY="81.0" prefHeight="30.0" prefWidth="118.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labellieu" layoutX="619.0" layoutY="222.0" prefHeight="30.0" prefWidth="82.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelmodetravail" layoutX="623.0" layoutY="169.0" prefHeight="20.0" prefWidth="83.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelsalaire" layoutX="819.0" layoutY="81.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="886.0" layoutY="79.0" text="€ / mois" textFill="#755959">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeltypecontrat" layoutX="621.0" layoutY="51.0" prefHeight="20.0" prefWidth="136.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="780.0" layoutY="31.0" text="GRATIFICATION :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="78.0" prefHeight="25.0" prefWidth="68.0" text="Domaine :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="127.0" text="Description :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="788.0" layoutY="137.0" text="Durée :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="505.0" layoutY="51.0" text="typeContrat :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="109.0" text="Année d'expérience :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="164.0" prefHeight="30.0" prefWidth="149.0" text="mode Travail : " textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="552.0" layoutY="227.0" text="Lieu :" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="292.0" prefHeight="25.0" prefWidth="86.0" text="Experience  :" textFill="#151515">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="586.0" layoutY="292.0" prefHeight="30.0" prefWidth="163.0" text="Lettre de  motivations :" textFill="#151515">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="345.0" prefHeight="20.0" prefWidth="97.0" text="Diplome  :" textFill="#151515">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="398.0" text="Niveau Francais  :" textFill="#151515">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="443.0" text="Niveau Anglais  :" textFill="#151515">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputexperience" accessibleRole="INCREMENT_BUTTON" layoutX="340.0" layoutY="292.0" prefHeight="30.0" prefWidth="194.0" />
+      <Line endX="539.0" layoutX="451.0" layoutY="258.0" startX="-259.0" />
+      <ComboBox fx:id="inputdiplome" layoutX="337.0" layoutY="350.0" prefHeight="30.0" prefWidth="194.0" />
+      <TextArea fx:id="inputmotivation" layoutX="746.0" layoutY="279.0" prefHeight="76.0" prefWidth="228.0" />
+      <ComboBox fx:id="inputfrancais" layoutX="337.0" layoutY="396.0" prefHeight="30.0" prefWidth="194.0" />
+      <ComboBox fx:id="inputanglais" layoutX="337.0" layoutY="443.0" prefHeight="30.0" prefWidth="194.0" />
+      <Button fx:id="Postuler" layoutX="819.0" layoutY="443.0" mnemonicParsing="false" onAction="#Postuler" prefHeight="21.0" prefWidth="170.0" style="-fx-background-radius: 20; -fx-background-color: #6c63ff; -fx-underline: ; -fx-border-radius: 20;" text="Postuler" textFill="#fffdfd">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Timage" layoutX="706.0" layoutY="391.0" mnemonicParsing="false" onAction="#addimgcours" prefHeight="30.0" prefWidth="261.0" styleClass="light-button" text="Browse" />
+      <Label layoutX="592.0" layoutY="391.0" text="Votre Cv  :" textFill="#151515">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgajoutincours" fitHeight="76.0" fitWidth="112.0" layoutX="567.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="imgpathttt" layoutX="434.0" layoutY="496.0" opacity="0.0" textFill="#ececec" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="prec" layoutX="242.0" layoutY="491.0" onAction="#prec" text="Retour" textFill="#6c63ff">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Hyperlink>
+      <AnchorPane layoutX="-1.0" prefHeight="550.0" prefWidth="163.0" style="-fx-background-color: #6C63FF;">
+         <children>
+            <ImageView fitHeight="122.0" fitWidth="178.0" layoutX="-6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/image.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Home" layoutX="26.0" layoutY="151.0" mnemonicParsing="false" onAction="#Home" prefHeight="34.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="HOME" textFill="#fff7f7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="gotooffre" layoutX="23.0" layoutY="200.0" mnemonicParsing="false" onAction="#gotooffre" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-underline: ; -fx-border-radius: 20;" text="offres" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="N_BMHome1" layoutX="24.0" layoutY="251.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #242526; -fx-border-color: #242526; -fx-border-width: 2;" text="candidatures" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="gotocontrats" layoutX="26.0" layoutY="302.0" mnemonicParsing="false" onAction="#gotocontrats" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="contrats" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

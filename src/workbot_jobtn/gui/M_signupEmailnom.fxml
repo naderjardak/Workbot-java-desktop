@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.M_signupEmailnomController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="502.0" prefWidth="720.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="M_rolc" layoutX="431.0" layoutY="111.0" />
+            <TextField fx:id="M_rolle" layoutX="513.0" layoutY="165.0" />
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/sign%20up2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="M_Suivant" layoutX="647.0" layoutY="479.0" mnemonicParsing="false" onAction="#M_SuivantSD" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #6C63FF;" text=" Suivant" textFill="WHITE" />
+            <TextField fx:id="M_NomSD" layoutX="537.0" layoutY="306.0" />
+            <Label fx:id="namelabel" layoutX="453.0" layoutY="290.0" />
+            <TextField fx:id="M_mailmSD2" layoutX="537.0" layoutY="423.0" onKeyPressed="#checkFIELD" />
+            <TextField fx:id="M_pomSD1" layoutX="536.0" layoutY="369.0" prefHeight="26.0" prefWidth="150.0" />
+            <AnchorPane fx:id="panne" layoutX="513.0" layoutY="345.0" prefHeight="54.0" prefWidth="226.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" stroke="WHITE" strokeType="INSIDE" width="204.0" />
+                  <Line endX="49.2000732421875" layoutX="126.0" layoutY="28.0" startX="-100.0" />
+               </children>
+            </AnchorPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

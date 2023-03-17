@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.CandidatureListController">
+   <children>
+      <AnchorPane layoutX="-14.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Separator layoutX="148.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="543.0" prefWidth="7.0" />
+            <TabPane layoutX="164.0" layoutY="1.0" prefHeight="543.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Candidatures">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="666.0">
+                           <children>
+                              <TableView fx:id="tableview2" layoutX="3.0" prefHeight="443.0" prefWidth="734.0">
+                                 <columns>
+                                    <TableColumn fx:id="Domaine" prefWidth="257.0" text="Domaine" />
+                                    <TableColumn fx:id="titre" prefWidth="142.39996337890625" text="titre" />
+                                    <TableColumn fx:id="date" prefWidth="291.20001220703125" text="date d'inscription" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="Modifier" layoutX="35.0" layoutY="467.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="Modifier" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="Supprimer" layoutX="258.0" layoutY="467.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="34.0" prefWidth="161.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="Supprimer Candidature" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Tache">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="761.0">
+                           <children>
+                              <TableView fx:id="tableview3" prefHeight="438.0" prefWidth="743.0">
+                                 <columns>
+                                    <TableColumn fx:id="Domaine1" prefWidth="153.6000213623047" text="Domaine" />
+                                    <TableColumn fx:id="titre1" prefWidth="166.4000244140625" text="titre" />
+                                    <TableColumn fx:id="date1" prefWidth="200.0" text="date d'inscription" />
+                                    <TableColumn fx:id="dateexpriration" prefWidth="220.79997558593755" text="dateexpriration" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="Modifier1" layoutX="136.0" layoutY="450.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="Modifier" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="Supprimer2" layoutX="304.0" layoutY="449.0" mnemonicParsing="false" onAction="#Supprimer2" prefHeight="34.0" prefWidth="161.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="Supprimer Tache" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <AnchorPane layoutX="14.0" layoutY="-17.0" prefHeight="570.0" prefWidth="150.0" style="-fx-background-color: #6C63FF;">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="150.0" layoutX="-1.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cours/1664023543357.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Home" layoutX="14.0" layoutY="152.0" mnemonicParsing="false" onAction="#Home" prefHeight="34.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="HOME" textFill="#fff7f7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gotooffre" layoutX="11.0" layoutY="200.0" mnemonicParsing="false" onAction="#gotooffre" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-underline: ; -fx-border-radius: 20;" text="offres" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="N_BMHome1" layoutX="11.0" layoutY="248.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="126.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="candidatures" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="gotocontrats" layoutX="11.0" layoutY="298.0" mnemonicParsing="false" onAction="#gotocontrats" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="contrats" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

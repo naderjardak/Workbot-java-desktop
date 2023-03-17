@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="choix_typeRoot" prefHeight="388.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.ChoixOffreController">
+   <children>
+      <Label layoutX="52.0" layoutY="65.0" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: e5e5e5;" text="  Offre d'emploi CDI/CDD/CIVP">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="156.0" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: e5e5e5;" text="  Offre de Stage  PFE/ETE/Alteranance">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="259.0" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: e5e5e5;" text="  Offre freelancer ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="20.0" prefHeight="45.0" prefWidth="218.0" text="Chiosisez le type de l'offre *">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_suivant" layoutX="227.0" layoutY="333.0" mnemonicParsing="false" onAction="#onclicked_suivant" prefHeight="32.0" prefWidth="79.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="Suivant">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <RadioButton fx:id="radio_emploi" layoutX="273.0" layoutY="79.0" mnemonicParsing="false" onAction="#getOffre" selected="true">
+         <toggleGroup>
+            <ToggleGroup fx:id="offre" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radio_stage" layoutX="281.0" layoutY="170.0" mnemonicParsing="false" onAction="#getOffre" toggleGroup="$offre" />
+      <RadioButton fx:id="radio_freelancer" layoutX="273.0" layoutY="273.0" mnemonicParsing="false" toggleGroup="$offre" />
+   </children>
+</AnchorPane>

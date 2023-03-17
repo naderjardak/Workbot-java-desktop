@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="alertafficheev" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.AfficheeventController">
+   <children>
+      <ImageView fitHeight="559.0" fitWidth="175.0" layoutX="-2.0" layoutY="-3.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@309718047_3247791828796491_6017093170681667861_n.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="HTABV" layoutX="154.0" layoutY="1.0" onMouseClicked="#remplire_update" prefHeight="294.0" prefWidth="729.0" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="aff_datedb" prefWidth="75.0" text="Date debut" />
+          <TableColumn fx:id="aff_datefin" prefWidth="75.0" text="Date Fin" />
+            <TableColumn fx:id="aff_lib" prefWidth="76.0" text="Libelle" />
+            <TableColumn fx:id="aff_heuredb" prefWidth="79.20002746582031" text="Heure Debut" />
+            <TableColumn fx:id="aff_heurefin" prefWidth="63.199951171875" text="Heure Fin" />
+            <TableColumn fx:id="aff_nbplc" prefWidth="60.0" text="N°Places " />
+            <TableColumn fx:id="aff_prix" prefWidth="84.0" text="Prix d'entrée" />
+            <TableColumn fx:id="aff_flyer" prefWidth="101.5999755859375" text="Flyer" />
+            <TableColumn fx:id="idev" prefWidth="176.7999267578125" text="ID" visible="false" />
+            <TableColumn fx:id="aff_video" prefWidth="110.4000244140625" text="Video" />
+        </columns>
+      </TableView>
+      <TextField fx:id="datdb" layoutX="267.0" layoutY="301.0" />
+      <TextField fx:id="datfn" layoutX="267.0" layoutY="415.0" />
+      <TextField fx:id="libel" layoutX="547.0" layoutY="301.0" />
+      <TextField fx:id="nbplace" layoutX="547.0" layoutY="339.0" />
+      <TextField fx:id="heurfn" layoutX="269.0" layoutY="453.0" />
+      <TextField fx:id="heurdb" layoutX="268.0" layoutY="340.0" />
+      <TextField fx:id="prix" layoutX="269.0" layoutY="377.0" />
+      <TextField fx:id="flyer" layoutX="547.0" layoutY="428.0" />
+      <TextField fx:id="video" layoutX="547.0" layoutY="377.0" />
+      <Label layoutX="184.0" layoutY="303.0" text="Date debut">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="datefn" layoutX="206.0" layoutY="416.0" text="Datefin">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="304.0" text="Libelle">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="183.0" layoutY="342.0" text="Heure debut">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="456.0" text="Heure fin">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="343.0" text="N° des places">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="380.0" text="Prix d'entrée">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="H_btnupdateevent" layoutX="738.0" layoutY="323.0" mnemonicParsing="false" onAction="#updateevents" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="H_btndeleteevent" layoutX="738.0" layoutY="380.0" mnemonicParsing="false" onAction="#deleteevents" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="H_afficheparticip" layoutX="738.0" layoutY="437.0" mnemonicParsing="false" onAction="#H_affichepart" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Participants" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="affiche_spon" layoutX="738.0" layoutY="490.0" mnemonicParsing="false" onAction="#affichesponbtn" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Sponsors" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="homeevntaff" layoutX="3.0" layoutY="120.0" mnemonicParsing="false" onAction="#homeevntaffich" prefHeight="40.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Tableau de board" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="alertaffev" layoutX="344.0" layoutY="500.0" prefHeight="20.0" prefWidth="345.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="vidchoose" layoutX="458.0" layoutY="374.0" mnemonicParsing="false" onAction="#doclickvidchoose" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Video" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="flychoose" layoutX="458.0" layoutY="425.0" mnemonicParsing="false" onAction="#doclickflychoose" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Flyer" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="retouraffevent" layoutX="176.0" layoutY="490.0" mnemonicParsing="false" onAction="#doclickretouraffevent" prefHeight="40.0" prefWidth="132.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="RETOUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="129.0" fitWidth="132.0" layoutX="14.0" layoutY="5.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@308181173_3429967987279219_7821870094501611281_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="refrechev" layoutX="3.0" layoutY="178.0" mnemonicParsing="false" onAction="#doclickrefrechev" prefHeight="40.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Liste d'évènnements" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="searchinputaffev" layoutX="547.0" layoutY="463.0" />
+      <Label layoutX="458.0" layoutY="467.0" prefHeight="20.0" prefWidth="74.0" text="chercher">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnaddrefrech" layoutX="3.0" layoutY="235.0" mnemonicParsing="false" onAction="#doclickbtnaddrefrech" prefHeight="40.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Créer évènnement" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

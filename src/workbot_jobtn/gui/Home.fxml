@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.HomeController">
+   <children>
+      <ImageView fitHeight="333.0" fitWidth="448.0" layoutX="95.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/candidat-ideal.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="570.0" prefWidth="150.0" style="-fx-background-color: #6C63FF;">
+         <children>
+            <ImageView fitHeight="151.0" fitWidth="150.0" layoutX="-1.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cours/1664023543357.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Home" layoutX="14.0" layoutY="152.0" mnemonicParsing="false" onAction="#Home" prefHeight="34.0" prefWidth="119.0" style="-fx-background-radius: 20;" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="HOME" textFill="#fff7f7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="gotooffre" layoutX="11.0" layoutY="200.0" mnemonicParsing="false" onAction="#gotooffre" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-underline: ; -fx-border-radius: 20;" text="offres" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="N_BMHome1" layoutX="11.0" layoutY="248.0" mnemonicParsing="false" onAction="#candidature_menu" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #8D87F0; -fx-border-width: 2;" text="candidatures" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="gotocontrats" layoutX="11.0" layoutY="296.0" mnemonicParsing="false" onAction="#gotocontrats" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0;" text="contrats" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="344.0" mnemonicParsing="false" onAction="#evennement_menu" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-underline: ; -fx-border-radius: 20;" text="evennement" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="393.0" mnemonicParsing="false" onAction="#Cours_window" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-underline: ; -fx-border-radius: 20;" text="Cours" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <WebView fx:id="N_AdsView" layoutX="11.0" layoutY="438.0" prefHeight="123.0" prefWidth="126.0" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="356.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu a board !" wrappingWidth="374.936767578125">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <PieChart fx:id="tabchart" layoutX="523.0" layoutY="225.0" prefHeight="286.0" prefWidth="364.0" />
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="298.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/hello.png" />
+         </image>
+      </ImageView>
+      <Line endX="660.0999755859375" layoutX="251.0" layoutY="169.0" startX="-100.0" />
+      <Line endX="660.0928955078125" layoutX="250.0" layoutY="523.0" startX="-100.0" />
+      <Text fill="#484747" layoutX="612.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistique candidature" wrappingWidth="207.7366943359375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="135.0" layoutY="514.0" mnemonicParsing="false" onAction="#reclam" opacity="0.0" prefHeight="35.0" prefWidth="55.0" />
+      <Button layoutX="842.0" layoutY="523.0" mnemonicParsing="false" onAction="#reclam" opacity="0.0" prefHeight="35.0" prefWidth="55.0" />
+      <ImageView disable="true" fitHeight="46.0" fitWidth="35.0" layoutX="852.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/téléchargé.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="808.0" layoutY="19.0" mnemonicParsing="false" onAction="#OnClick_settings" prefHeight="20.0" prefWidth="20.0" text="Button" textFill="WHITE" />
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="812.0" layoutY="23.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../../icons/settings-4-16.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="35.0" layoutX="852.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/user.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="menu_profile" layoutX="640.0" layoutY="43.0" prefHeight="91.0" prefWidth="202.0" visible="false">
+         <children>
+            <VBox layoutX="5.0" layoutY="-4.0" prefHeight="91.0" prefWidth="189.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#profile" prefHeight="30.0" prefWidth="205.0" style="-fx-background-color: #242526; -fx-border-color: #FFFFFF;" text="Profile" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#compte" prefHeight="30.0" prefWidth="213.0" style="-fx-background-color: #242526; -fx-border-color: #FFFFFF;" text="Gérer Compte" textFill="WHITE" />
+                  <Button fx:id="N_BDeconnecter" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="199.0" style="-fx-background-color: #242526; -fx-border-color: #FFFFFF;" text="Déconnecter" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

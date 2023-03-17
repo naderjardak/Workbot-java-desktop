@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="898.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.N_CoursHtml">
+   <children>
+      <ImageView fitHeight="543.0" fitWidth="159.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Rectangle%202.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="13.0" layoutY="196.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #6C63FF; -fx-border-radius: 20; -fx-border-width: 1; -fx-border-color: #FFFFFF;" text="COURS" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button id="BUTTON" layoutX="13.0" layoutY="236.0" mnemonicParsing="false" onAction="#Certif" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-border-color: #FFFFFF; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@Button.css" text="CERTIFICATION" textFill="#fff7f7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="145.0" fitWidth="174.0" layoutX="3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/1664023543357.png" />
+         </image>
+      </ImageView>
+      <Button id="BUTTON" layoutX="13.0" layoutY="152.0" mnemonicParsing="false" onAction="#Home" prefHeight="30.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #8D87F0; -fx-border-width: 2; -fx-border-color: #FFFFFF;" stylesheets="@Button.css" text="ACCUEIL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ButtonBar layoutX="152.0" layoutY="493.0">
+         <buttons>
+            <Button id="BUTTON" fx:id="retourne" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#retourne" prefHeight="30.0" prefWidth="91.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #FFFFFF; -fx-border-color: #242526; -fx-border-width: 2;" stylesheets="@Button.css" text="Retourne">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button id="BUTTON" fx:id="reset" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#reset_html" prefHeight="33.0" prefWidth="91.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #FFFFFF; -fx-border-color: #242526; -fx-border-width: 2;" stylesheets="@Button.css" text="Actualiser">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <WebView fx:id="N_AdsView" layoutX="5.0" layoutY="317.0" onMousePressed="#Browser" prefHeight="215.0" prefWidth="138.0" />
+      <WebView fx:id="N_CoursHtml" layoutX="151.0" prefHeight="484.0" prefWidth="747.0" />
+      <Separator layoutX="149.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="543.0" prefWidth="7.0" />
+   </children>
+</AnchorPane>

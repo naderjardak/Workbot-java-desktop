@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="898.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.N_ajouter_Certification">
+   <children>
+      <Separator layoutX="149.0" layoutY="190.0" prefHeight="12.0" prefWidth="752.0" />
+      <Separator layoutX="149.0" layoutY="425.0" prefHeight="12.0" prefWidth="752.0" />
+      <ImageView fitHeight="543.0" fitWidth="159.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Rectangle%202.png" />
+         </image>
+      </ImageView>
+      <Button id="BUTTON" layoutX="13.0" layoutY="196.0" mnemonicParsing="false" onAction="#Cours" prefHeight="30.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #8D87F0; -fx-border-radius: 20; -fx-border-width: 2; -fx-border-color: #FFFFFF;" stylesheets="@Button.css" text="COURS" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="13.0" layoutY="239.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #6C63FF; -fx-border-color: #FFFFFF; -fx-border-radius: 20;" text="CERTIFICATION" textFill="#fff7f7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="145.0" fitWidth="174.0" layoutX="3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/1664023543357.png" />
+         </image>
+      </ImageView>
+      <Button id="BUTTON" layoutX="13.0" layoutY="152.0" mnemonicParsing="false" onAction="#home" prefHeight="30.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #8D87F0; -fx-border-width: 2; -fx-border-color: #FFFFFF;" stylesheets="@Button.css" text="ACCUEIL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="45.0" fitWidth="428.0" layoutX="312.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ajouter%20Certification.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="272.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ellipse%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="54.0" layoutX="794.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ellipse%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="54.0" layoutX="227.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ellipse%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="757.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ellipse%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="293.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ellipse%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="745.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cours/Ellipse%204.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="550.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre de Test :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="N_add_certif_test" layoutX="550.0" layoutY="272.0" prefHeight="26.0" prefWidth="266.0" style="-fx-background-radius: 20;" />
+      <Text layoutX="215.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre de Cours :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="N_add_certif_cours" layoutX="206.0" layoutY="272.0" prefHeight="26.0" prefWidth="266.0" style="-fx-background-radius: 20;" />
+      <Separator layoutX="149.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="543.0" prefWidth="7.0" />
+      <WebView fx:id="N_AdsView" layoutX="6.0" layoutY="323.0" onMousePressed="#Browser" prefHeight="209.0" prefWidth="138.0" />
+      <Button id="BUTTON" fx:id="N_retourne_to_N_menu" alignment="CENTER" contentDisplay="BOTTOM" layoutX="161.0" layoutY="493.0" mnemonicParsing="false" onAction="#Retourne_To_N_Menu" prefHeight="26.0" prefWidth="106.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #FFFFFF; -fx-border-color: #242526; -fx-border-width: 2;" stylesheets="@Button.css" text="Retour">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ButtonBar layoutX="550.0" layoutY="355.0" prefHeight="30.0" prefWidth="245.0">
+         <buttons>
+            <Button id="BUTTON" fx:id="N_add_certif_Bajouter" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#Ajouter_Certif_Button_Clicked" prefHeight="26.0" prefWidth="106.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #6C63FF; -fx-border-color: #242526; -fx-border-width: 2;" stylesheets="@Button.css" text="Ajouter" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button id="BUTTON" fx:id="N_add_certif_Breset" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#reset" prefHeight="33.0" prefWidth="106.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #6C63FF; -fx-border-color: #242526; -fx-border-width: 2;" stylesheets="@Button.css" text="Reset" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Text layoutX="215.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="err_msg" layoutX="582.0" layoutY="396.0" prefHeight="18.0" prefWidth="201.0" textFill="#009e1d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button id="BUTTON" layoutX="293.0" layoutY="336.0" mnemonicParsing="false" onAction="#path_cours" prefHeight="70.0" prefWidth="63.0" style="-fx-background-color: #FFFFF; -fx-border-radius: 80; -fx-background-radius: 80; -fx-border-color: #242526; -fx-border-width: 1;" stylesheets="@Button.css">
+         <graphic>
+            <ImageView fitHeight="62.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cours/icons/telecharger%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.M_LoginUser">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="502.0" prefWidth="720.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/Page%201%20-%20Login%20Screen%20(6).png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="M_Mail" layoutX="525.0" layoutY="307.0" promptText="E-mail" />
+            <Button fx:id="M_loginidb" layoutX="532.0" layoutY="450.0" mnemonicParsing="false" onAction="#M_loginidb" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #6C63FF;" text="Login" textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="M_restorepassword" layoutX="513.0" layoutY="407.0" mnemonicParsing="false" onAction="#M_restorepasswordMethode" prefHeight="31.0" prefWidth="237.0" style="-fx-background-color: #FFFFFF;" text="Password ?" textFill="#6c63ff" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="532.0" layoutY="412.0" prefHeight="21.0" prefWidth="92.0" text="Forgot your " textFill="#7a7a7a">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button fx:id="M_creecompte" layoutX="513.0" layoutY="491.0" mnemonicParsing="false" onAction="#M_creecompteactionB" prefHeight="23.0" prefWidth="288.0" style="-fx-background-color: #FFFFFF;" text="Créer un compte">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="532.0" layoutY="495.0" text="Pas encore inscrit?" textFill="#7a7a7a">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button layoutX="578.0" layoutY="222.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF;" text="Login through Google" textFill="#7a7a7a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            
+            </Button>
+            <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="550.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/googel.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="passwordText_M" layoutX="525.0" layoutY="376.0" prefHeight="31.0" prefWidth="142.0" />
+            <PasswordField fx:id="M_password" layoutX="525.0" layoutY="376.0" prefHeight="31.0" prefWidth="142.0" promptText="Password" />
+            <CheckBox fx:id="M_Monterpa" layoutX="643.0" layoutY="381.0" mnemonicParsing="false" onAction="#MonterPassword" onMouseClicked="#MonterPassword1" prefHeight="21.0" prefWidth="14.0" />
+            <ImageView fx:id="eclipse" fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/Ellipse%203.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagedour" fitHeight="82.0" fitWidth="82.0" layoutX="55.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/Vector.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="icon" fitHeight="124.0" fitWidth="158.0" layoutX="25.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/undraw_world_re_768g%201.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="m_map" layoutX="43.0" layoutY="551.0" mnemonicParsing="false" onAction="#m_map" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #6C63FF;" text="Map" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="15.0" fitWidth="23.0" layoutX="43.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/map-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="eclipse2" fitHeight="139.0" fitWidth="121.0" layoutX="246.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/Ellipse%202.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="icon1" fitHeight="109.0" fitWidth="121.0" layoutX="234.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/undraw_advanced_customization_re_wo6h%201%20(3).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="eclipse3" fitHeight="139.0" fitWidth="121.0" layoutX="40.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/Ellipse%203.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="icon2" fitHeight="109.0" fitWidth="142.0" layoutX="25.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/undraw_pay_online_re_aqe6%201.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

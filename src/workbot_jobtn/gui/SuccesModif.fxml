@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="slide1" prefHeight="422.0" prefWidth="661.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="workbot_jobtn.gui.SuccesModifController">
+   <children>
+      <Label fx:id="choice" layoutX="126.0" layoutY="100.0" opacity="0.0" prefHeight="17.0" prefWidth="16.0" />
+      <ImageView fitHeight="100.0" fitWidth="104.0" layoutX="126.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/validation_bleu_sombre.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="253.0" layoutY="141.0" prefHeight="52.0" prefWidth="292.0" text="Offre Modifé avec succès">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDash" layoutX="254.0" layoutY="300.0" mnemonicParsing="false" onAction="#onClick_Dash" prefHeight="37.0" prefWidth="154.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="Voir tableau de board" />
+      <Button fx:id="btnAjouterOffre" layoutX="442.0" layoutY="300.0" mnemonicParsing="false" onAction="#OnclickAjouterOffre" prefHeight="37.0" prefWidth="160.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="Consulter les offres" />
+   </children>
+</Pane>

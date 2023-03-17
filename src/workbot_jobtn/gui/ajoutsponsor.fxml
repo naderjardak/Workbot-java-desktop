@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.AjoutsponsorController">
+   <children>
+      <ImageView fitHeight="570.0" fitWidth="156.0" layoutY="-3.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@309718047_3247791828796491_6017093170681667861_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="181.0" layoutY="120.0" prefHeight="27.0" prefWidth="117.0" text="Nom Sponsor">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="aj_sponsor" layoutX="176.0" layoutY="153.0" prefHeight="26.0" prefWidth="174.0" />
+      <TextField fx:id="aj_logo" layoutX="173.0" layoutY="225.0" prefHeight="26.0" prefWidth="173.0" />
+      <Button fx:id="confirmajsponsor" layoutX="202.0" layoutY="327.0" mnemonicParsing="false" onAction="#confirmajspon" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Ajouter" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="HTABSPON" layoutX="378.0" layoutY="165.0" onMouseClicked="#H_sponclick" prefHeight="354.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="H_nomspon" prefWidth="92.79998779296875" text="Nom Sponsor" />
+          <TableColumn fx:id="H_logo" prefWidth="242.39999389648438" text="Logo" />
+            <TableColumn fx:id="idspn" prefWidth="68.7999267578125" text="ID" visible="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="upspon" layoutX="202.0" layoutY="369.0" mnemonicParsing="false" onAction="#Updatespon" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="delspon" layoutX="202.0" layoutY="413.0" mnemonicParsing="false" onAction="#deletespon" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #4848e2; -fx-background-radius: 20;" text="Supprimer" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="retajspons" layoutX="169.0" layoutY="499.0" mnemonicParsing="false" onAction="#doclickretajspon" prefHeight="32.0" prefWidth="118.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="alertajspon" layoutX="171.0" layoutY="260.0" prefHeight="47.0" prefWidth="196.0" style="-fx-background-radius: 20;">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="289.0" layoutY="20.0" prefHeight="35.0" prefWidth="502.0" text="Veuiller remplir les champs s'il vous plait">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoajoutev" layoutX="175.0" layoutY="186.0" mnemonicParsing="false" onAction="#doclicklogochoose" prefHeight="20.0" prefWidth="174.0" style="-fx-border-color: #4848e2; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2;" text="Logo">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="homeajspon" layoutX="6.0" layoutY="130.0" mnemonicParsing="false" onAction="#homeajspon" prefHeight="40.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Tableau de board" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="129.0" fitWidth="132.0" layoutX="14.0" layoutY="5.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@308181173_3429967987279219_7821870094501611281_n.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="6.0" layoutY="295.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Sponsors" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="sponinputsearch" layoutX="723.0" layoutY="117.0" />
+      <Label layoutX="648.0" layoutY="120.0" prefHeight="20.0" prefWidth="74.0" text="Recherche">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="Toaddevent" layoutX="7.0" layoutY="235.0" mnemonicParsing="false" onAction="#doclickToaddevent" prefHeight="40.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Créer évènnement" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Toeventlist" layoutX="7.0" layoutY="183.0" mnemonicParsing="false" onAction="#doclickToeventlist" prefHeight="40.0" prefWidth="142.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Liste d'évènnements" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

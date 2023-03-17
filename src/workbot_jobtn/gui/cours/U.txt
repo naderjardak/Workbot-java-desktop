@@ -1,0 +1,32 @@
+****Enseignent:
+
+
+****GroupeCondidat
+Id
+SujetMeet
+Nbr
+DateMeet
+LienMeet(notification par mail) 
+
+->Marbout bil candidat 
+****Cours :
+Id
+Theme
+Sujet 
+
+->marbout bil candidat 
+
+***Sertification:
+Date 
+formateur 
+
+Sertification (randem test payant) / Qr code de société (formation w sertification ballouchi) affichage de correction avec les arguments 
+
+>>badge des notes completes
+
+Ads par theme de cours 
+
+>>Calendrier de Cours par meet (classe des élèves) email de notification de lien meet 
+
+
+>>Chat (enseignant  condidat)

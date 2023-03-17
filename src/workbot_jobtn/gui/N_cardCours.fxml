@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#N_Consulter_Cours" prefHeight="174.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #242526; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.N_cardCours">
+   <children>
+      <ImageView fx:id="coursImage" fitHeight="116.0" fitWidth="136.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@cours/python.png" />
+         </image>
+         <VBox.margin>
+            <Insets left="7.0" />
+         </VBox.margin>
+      </ImageView>
+      <VBox prefHeight="62.0" prefWidth="150.0" style="-fx-background-color: #242526; -fx-border-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Label id="BUTTON" fx:id="CoursName" alignment="CENTER" contentDisplay="RIGHT" prefHeight="51.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@Button.css" text="Label" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

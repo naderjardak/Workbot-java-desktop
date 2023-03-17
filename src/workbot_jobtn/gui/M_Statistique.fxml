@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.M_StatisitiqueController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="502.0" prefWidth="720.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/ad4%20(5).png" />
+               </image>
+            </ImageView>
+            <Button layoutX="138.0" layoutY="144.0" mnemonicParsing="false" onAction="#M_listclientLA" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #ffffff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="List Admin" textFill="#6c63ff" />
+            <Button fx:id="M_listclientLS" layoutX="138.0" layoutY="212.0" mnemonicParsing="false" onAction="#M_listclientLS" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #ffffff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="List Client" textFill="#6c63ff" />
+            <Button layoutX="138.0" layoutY="284.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #6c63ff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Statistique" textFill="WHITE" />
+            <Button layoutX="138.0" layoutY="348.0" mnemonicParsing="false" onAction="#cours_open" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Cours" textFill="#6c63ff" />
+            <Button fx:id="M_logoutLAid" layoutX="104.0" layoutY="14.0" mnemonicParsing="false" onAction="#M_logoutLAaction" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-radius: 6;" text="Logout">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <BarChart fx:id="batChart" layoutX="294.0" layoutY="148.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Button layoutX="139.0" layoutY="85.0" mnemonicParsing="false" onAction="#On_reclamtion" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Reclamations" textFill="#6c63ff" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

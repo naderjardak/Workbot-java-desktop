@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.M_Listclient">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="502.0" prefWidth="720.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="M_mailLCtextfuild" layoutX="287.0" layoutY="511.0" />
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Listclientt.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="M_tableLC" layoutX="272.0" layoutY="107.0" onMouseClicked="#getSelected" prefHeight="387.0" prefWidth="543.0">
+              <columns>
+                <TableColumn fx:id="M_roleLCC" prefWidth="44.0" text="Role" />
+                <TableColumn fx:id="M_preLCC" prefWidth="65.0" text="Prenom" />
+                  <TableColumn fx:id="M_nomLCC" prefWidth="50.0" text="Nom" />
+                  <TableColumn fx:id="M_emailLCC" prefWidth="61.0" text="E-mail" />
+                  <TableColumn fx:id="M_telLCC" prefWidth="94.0" text="Telephone" />
+                  <TableColumn fx:id="M_adresseLCC" prefWidth="102.0" text="Adresse" />
+                  <TableColumn fx:id="M_domaineCC" minWidth="0.0" prefWidth="126.0" text="Domaine" />
+                  <TableColumn fx:id="colid" prefWidth="75.0" text="id" visible="false" />
+              </columns>
+            </TableView>
+            <Button layoutX="140.0" layoutY="147.0" mnemonicParsing="false" onAction="#M_listclientLS" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #ffffff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="List Admin" textFill="#6c63ff" />
+            <Button fx:id="M_listclientLS" layoutX="140.0" layoutY="213.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #6c63ff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="List Client" textFill="WHITE" />
+            <Button layoutX="140.0" layoutY="284.0" mnemonicParsing="false" onAction="#statiquem" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Statistique" textFill="#6c63ff" />
+            <Button layoutX="140.0" layoutY="348.0" mnemonicParsing="false" onAction="#cours_open" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Cours" textFill="#6c63ff" />
+            <Button fx:id="imprimer_LC" layoutX="732.0" layoutY="65.0" mnemonicParsing="false" onAction="#imprimer_LC" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Imprimer" textFill="#6c63ff" />
+            <TextField fx:id="M_id" layoutX="732.0" layoutY="511.0" prefHeight="31.0" prefWidth="90.0" />
+            <Button fx:id="M_supprimLCC" layoutX="531.0" layoutY="510.0" mnemonicParsing="false" onAction="#M_supprimLCC" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #6c63ff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Supprimer" textFill="WHITE" />
+            <Button fx:id="M_rechercheLAA" layoutX="640.0" layoutY="510.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #6c63ff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Rechercher" textFill="WHITE" />
+            <Button fx:id="M_logoutLAid" layoutX="100.0" layoutY="14.0" mnemonicParsing="false" onAction="#M_logoutLAaction" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-radius: 6;" text="Logout">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="140.0" layoutY="85.0" mnemonicParsing="false" onAction="#On_reclamtion" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Reclamations" textFill="#6c63ff" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

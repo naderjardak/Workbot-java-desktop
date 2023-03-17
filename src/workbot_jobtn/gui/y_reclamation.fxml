@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.Y_reclamationController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="174.0" layoutY="97.0" prefHeight="406.0" prefWidth="274.0">
+         <children>
+            <Label layoutX="27.0" layoutY="22.0" text="Titre:" />
+            <Label layoutX="28.0" layoutY="101.0" text="Description:" />
+            <TextField fx:id="objet" layoutX="30.0" layoutY="45.0" prefHeight="26.0" prefWidth="158.0" />
+            <TextArea fx:id="description" layoutX="29.0" layoutY="124.0" prefHeight="95.0" prefWidth="200.0" />
+            <Button layoutX="29.0" layoutY="361.0" mnemonicParsing="false" onAction="#envoyer" text="envoyer" />
+            <Button fx:id="modifier" layoutX="28.0" layoutY="361.0" mnemonicParsing="false" onAction="#modifier" text="modifier" visible="false" />
+            <Button fx:id="annuler" layoutX="159.0" layoutY="361.0" mnemonicParsing="false" onAction="#annuler" text="annuler" visible="false" />
+            <Label layoutX="30.0" layoutY="233.0" text="Image:" />
+            <TextField fx:id="tf_image" layoutX="29.0" layoutY="259.0" />
+            <Button fx:id="button_upload" layoutX="193.0" layoutY="257.0" mnemonicParsing="false" onAction="#upload" prefHeight="30.0" prefWidth="58.0" text="upload" />
+            <ImageView fx:id="iv_image" fitHeight="52.0" fitWidth="75.0" layoutX="29.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="objet_obligatoire" layoutX="198.0" layoutY="40.0" text="*" textFill="RED" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="description_obligatoire" layoutX="237.0" layoutY="137.0" text="*" textFill="RED" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="450.0" layoutY="40.0" text="Votre liste de réclamations:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="supprimer" layoutX="450.0" layoutY="458.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" visible="false" />
+      <TableView fx:id="table_reclamation" layoutX="449.0" layoutY="130.0" onMouseClicked="#lineselected" prefHeight="322.0" prefWidth="446.0">
+        <columns>
+            <TableColumn fx:id="col_id" prefWidth="62.4000244140625" text="Référence" />
+          <TableColumn fx:id="col_objet" prefWidth="48.0" text="Titre" />
+          <TableColumn fx:id="col_date" prefWidth="56.0" text="Date" />
+            <TableColumn fx:id="col_description" prefWidth="74.39990234375" text="Description" />
+            <TableColumn fx:id="col_categorie" prefWidth="72.0" text="Catégorie" />
+            <TableColumn fx:id="col_image" prefWidth="72.7999267578125" text="Image" />
+            <TableColumn fx:id="col_etat" prefWidth="59.199951171875" text="Etat" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tf_recherche" layoutX="767.0" layoutY="84.0" onAction="#rechercher" prefHeight="26.0" prefWidth="95.0" promptText="rechercher" />
+      <ImageView fx:id="recherchericon" fitHeight="47.0" fitWidth="28.0" layoutX="866.0" layoutY="84.0" onMouseClicked="#recherchericon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/rechercher.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="retouricon" fitHeight="18.0" fitWidth="32.0" layoutX="743.0" layoutY="87.0" onMouseClicked="#retouricon" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/retouricon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="709.0" layoutY="449.0" opacity="0.42" text="selectionnez un item pour éditer" underline="true" />
+      <Label fx:id="champ_obligatoire" layoutX="201.0" layoutY="501.0" text="( * ) champ obligatoire" textFill="RED" visible="false" />
+      <Pane fx:id="supprimer_confirmation" layoutX="372.0" layoutY="166.0" prefHeight="162.0" prefWidth="190.0" style="-fx-background-color: #acacac;" visible="false">
+         <children>
+            <Label layoutX="19.0" layoutY="47.0" text="réclamation supprimée" textFill="#990000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="69.0" layoutY="85.0" mnemonicParsing="false" onAction="#fermer_confirmation_supprimer" style="-fx-background-color: #1fa2de;" text="fermer" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Pane>
+      <Pane fx:id="modifier_confirmation" layoutX="372.0" layoutY="162.0" prefHeight="162.0" prefWidth="190.0" style="-fx-background-color: #acacac;" visible="false">
+         <children>
+            <Label layoutX="19.0" layoutY="47.0" text="réclamation modifiée" textFill="#007700">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="69.0" layoutY="85.0" mnemonicParsing="false" onAction="#fermer_confirmation_modifier" style="-fx-background-color: #1fa2de;" text="fermer" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Pane>
+      <Pane fx:id="lb_confirmer_envoyer" layoutX="372.0" layoutY="166.0" prefHeight="162.0" prefWidth="190.0" style="-fx-background-color: #acacac;" visible="false">
+         <children>
+            <Label layoutX="51.0" layoutY="36.0" text="confirmer:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="29.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oui_envoyer" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: #007700;" text="oui" textFill="WHITE">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="113.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#non_envoyer" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: #990000;" text="non" textFill="WHITE">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Glow>
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Pane>
+      <Pane fx:id="envoyer_confirmation" layoutX="372.0" layoutY="166.0" prefHeight="162.0" prefWidth="190.0" style="-fx-background-color: #acacac;" visible="false">
+         <children>
+            <Label layoutX="19.0" layoutY="47.0" text="réclamation envoyée" textFill="#007700">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="69.0" layoutY="85.0" mnemonicParsing="false" onAction="#fermer_confirmation_envoyer" style="-fx-background-color: #1fa2de;" text="fermer" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Pane>
+      <Pane fx:id="lb_confirmer_modifier" layoutX="372.0" layoutY="166.0" prefHeight="162.0" prefWidth="190.0" style="-fx-background-color: #acacac;" visible="false">
+         <children>
+            <Label layoutX="55.0" layoutY="36.0" text="confirmer:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="29.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oui_modifier" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: #007700;" text="oui" textFill="WHITE">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="113.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#non_modifier" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: #990000;" text="non" textFill="WHITE">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Glow>
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Pane>
+      <Pane fx:id="lb_confirmer_supprimer" layoutX="372.0" layoutY="166.0" prefHeight="162.0" prefWidth="190.0" style="-fx-background-color: #acacac;" visible="false">
+         <children>
+            <Label layoutX="55.0" layoutY="36.0" text="confirmer:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="29.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oui_supprimer" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: #007700;" text="oui" textFill="WHITE">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="113.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#non_supprimer" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: #990000;" text="non" textFill="WHITE">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Glow>
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Pane>
+      <ImageView fx:id="refreshicon" fitHeight="30.0" fitWidth="20.0" layoutX="457.0" layoutY="95.0" onMouseClicked="#refreshricon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/refresh.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="side_anchor" layoutY="-11.0" prefHeight="572.0" prefWidth="190.0" style="-fx-background-color: #6c63ff;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="113.0" layoutX="41.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/image.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="29.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/facebook-4-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/twitter-24.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="8.0" layoutY="127.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="172.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Réclamations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="fb" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="508.0" mnemonicParsing="false" onAction="#Onclicked_fb" opacity="0.0" prefHeight="35.0" prefWidth="41.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="twitter" alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="508.0" mnemonicParsing="false" onAction="#Onclicked_twitter" opacity="0.0" prefHeight="35.0" prefWidth="41.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="90.0" fitWidth="113.0" layoutX="50.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/image.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="201.0" layoutY="510.0" mnemonicParsing="false" onAction="#on_retour" prefHeight="35.0" prefWidth="75.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Retour" />
+   </children>
+</AnchorPane>

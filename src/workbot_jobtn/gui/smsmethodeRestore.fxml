@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.SmsmethodeRestoreController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="502.0" prefWidth="720.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="SmSReponseL" layoutX="443.0" layoutY="127.0" prefHeight="31.0" prefWidth="137.0" />
+            <TextField fx:id="SmSMaiL" layoutX="443.0" layoutY="86.0" prefHeight="31.0" prefWidth="137.0" />
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rd/Property%201=Default.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="SmsNewPass" layoutX="546.0" layoutY="260.0" prefHeight="31.0" prefWidth="178.0" promptText="+21626662264" />
+            <Button fx:id="ConfirmerPassparSMS" layoutX="693.0" layoutY="450.0" mnemonicParsing="false" onAction="#ConfirmerSms" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #6C63FF;" text="Confirmer" textFill="WHITE" />
+            <TextField fx:id="SmsNewPass1" layoutX="546.0" layoutY="331.0" prefHeight="31.0" prefWidth="178.0" />
+            <Button fx:id="SendMail" layoutX="737.0" layoutY="260.0" mnemonicParsing="false" onAction="#SendMail" prefHeight="22.0" prefWidth="76.0" style="-fx-background-color: #7F7CB0;" text="Send" textFill="WHITE" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.AfficheparticipantController">
+   <children>
+      <ImageView fitHeight="558.0" fitWidth="175.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@309718047_3247791828796491_6017093170681667861_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="129.0" fitWidth="132.0" layoutX="4.0" layoutY="-5.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@308181173_3429967987279219_7821870094501611281_n.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="HTBPART" layoutX="187.0" layoutY="82.0" prefHeight="386.0" prefWidth="664.0">
+        <columns>
+          <TableColumn fx:id="H_nom" prefWidth="75.0" text="NOM" />
+          <TableColumn fx:id="H_prenom" prefWidth="75.0" text="PRENOM" />
+            <TableColumn fx:id="H_mail" prefWidth="404.8000183105469" text="MAIL" />
+        </columns>
+      </TableView>
+      <Button fx:id="retour" layoutX="187.0" layoutY="490.0" mnemonicParsing="false" onAction="#retourpartaff" prefHeight="40.0" prefWidth="132.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="RETOUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="H_homebtn" layoutX="5.0" layoutY="111.0" mnemonicParsing="false" onAction="#doclickhomebtnpartaff" prefHeight="40.0" prefWidth="138.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Tableau de board" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text layoutX="394.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des participants" wrappingWidth="249.00000000000006">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="refrechev" layoutX="6.0" layoutY="171.0" mnemonicParsing="false" onAction="#doclickrefrechev" prefHeight="40.0" prefWidth="138.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Liste d'évènnements" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnaddrefrech" layoutX="6.0" layoutY="228.0" mnemonicParsing="false" onAction="#doclickbtnaddrefrech" prefHeight="40.0" prefWidth="138.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Créer évènnement" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

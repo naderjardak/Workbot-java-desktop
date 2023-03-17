@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootnote" prefHeight="158.0" prefWidth="294.0" style="-fx-background-color: c5c5c5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.NoteTestController">
+   <children>
+      <TextField fx:id="text" layoutX="55.0" layoutY="79.0" prefHeight="25.0" prefWidth="130.0" />
+      <Label layoutX="98.0" layoutY="25.0" prefHeight="17.0" prefWidth="99.0" text="Attribuer une note" />
+      <Button fx:id="Okbtn" layoutX="214.0" layoutY="79.0" mnemonicParsing="false" onAction="#onclickOkbtn" styleClass="btnAjouter" stylesheets="@homesociete.css" text="Ok" />
+   </children>
+</AnchorPane>

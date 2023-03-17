@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.FirstparticipController">
+   <children>
+      <Text layoutX="385.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez gérer votre participation" wrappingWidth="475.20001220703125">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutY="-10.0" prefHeight="570.0" prefWidth="150.0" style="-fx-background-color: #6C63FF;" />
+      <ImageView fitHeight="149.0" fitWidth="173.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@308181173_3429967987279219_7821870094501611281_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="commencerpart" layoutX="424.0" layoutY="203.0" mnemonicParsing="false" onAction="#commencerpaticip" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Commencer votre expèrience" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="74.0" fitWidth="78.0" layoutX="297.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pngwing.com.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnhomefrstparticip" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#doclickbtnhomefrstparticip" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Topartaffiche" layoutX="11.0" layoutY="202.0" mnemonicParsing="false" onAction="#doclickTopartaffiche" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Events List" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Topartannul" layoutX="11.0" layoutY="255.0" mnemonicParsing="false" onAction="#doclickTopartannul" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="Your Events " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="238.0" layoutY="29.0" prefHeight="91.0" prefWidth="623.0" text="Bienvenue dans l'espace des participations">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

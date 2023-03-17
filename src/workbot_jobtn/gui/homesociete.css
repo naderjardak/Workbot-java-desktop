@@ -1,0 +1,46 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.root{
+    -fx-background-color : #f5f5f5;
+
+}
+.side_anker{
+    -fx-background-color : #6c63ff ;
+    -fx-border-color : #6c63ff ;
+    -fx-border-width : 2px 2px 2px 2px;
+    -fx-border-style : solid ;
+
+}
+.btnDashboard,.btnMenuOffre,.btnMenuEntretien,.btnMenuEvent{
+    -fx-background-color:  #8D87F0;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.dash_offre , .dash_cand , .dash_event ,.dash_part {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #6c63ff;
+    -fx-border-color: black;
+    -fx-text-font-style: regular;
+
+}
+.btnAjouter{
+    -fx-background-color: #6c63ff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+.btnSupp   {
+    -fx-background-color: #6c63ff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+.btnModif {
+    -fx-background-color: #6c63ff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}

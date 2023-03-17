@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="rootAjoutOffre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="883.0" stylesheets="@homesociete.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.OffreFreelancerController">
+   <children>
+      <VBox fx:id="menu" prefHeight="572.0" prefWidth="192.0">
+         <children>
+            <AnchorPane fx:id="side_anker" prefHeight="572.0" prefWidth="209.0" styleClass="side_anker" stylesheets="@homesociete.css">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="113.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/image.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnDashboard" layoutX="11.0" layoutY="127.0" mnemonicParsing="false" onAction="#onclick_dash" prefHeight="45.0" prefWidth="172.0" styleClass="btnMenuOffre" stylesheets="@homesociete.css" text="     Tableau de board" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="18.0" fitWidth="21.0" layoutX="23.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/dashboard-16.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnMenuOffre" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#onClicked_menuOffre" prefHeight="45.0" prefWidth="172.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="Offres" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnMenuEvent" layoutX="11.0" layoutY="253.0" mnemonicParsing="false" onAction="#OnClicked_menuEvent" prefHeight="45.0" prefWidth="172.0" styleClass="btnMenuEvent" stylesheets="@homesociete.css" text="   Evènements" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnMenuEntretien" layoutX="10.0" layoutY="319.0" mnemonicParsing="false" onAction="#OnClicked_menuEntretiens" prefHeight="45.0" prefWidth="172.0" styleClass="btnMenuEntretien" stylesheets="@homesociete.css" text="  Entretiens" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="24.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../IdeaProjects/UI_UX%20dashboard/src/main/resources/icons/timeline-16.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="29.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/facebook-4-24.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/twitter-24.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="fb" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="507.0" mnemonicParsing="false" onAction="#Onclicked_fb" opacity="0.0" prefHeight="35.0" prefWidth="41.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="fb1" alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="506.0" mnemonicParsing="false" onAction="#Onclicked_fb" opacity="0.0" prefHeight="35.0" prefWidth="41.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane fx:id="s" prefHeight="572.0" prefWidth="695.0">
+         <children>
+            <Pane prefHeight="64.0" prefWidth="708.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="407.0" layoutY="27.0">
+                     <image>
+                        <Image url="@../../icons/icons8-search-24.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="inputsearch" layoutX="436.0" layoutY="23.0" onKeyReleased="#onKeyRealeased_showSearchPropositions" prefHeight="25.0" prefWidth="102.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Button fx:id="btnUser" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="650.0" layoutY="17.0" mnemonicParsing="false" onAction="#OnClick_UserIcon" opacity="0.12" prefHeight="33.0" prefWidth="34.0" text="Button">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="settings" alignment="CENTER" contentDisplay="CENTER" layoutX="588.0" layoutY="21.0" mnemonicParsing="false" onAction="#OnClick_settings" opacity="0.21" prefHeight="20.0" prefWidth="20.0" text="Button" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView disable="true" fitHeight="16.0" fitWidth="16.0" layoutX="592.0" layoutY="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../../icons/settings-4-16.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="44.0" fitWidth="35.0" layoutX="649.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="8.0" prefHeight="64.0" prefWidth="154.0" text="Offres">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="44.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/elements-de-la-liste.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="slide1" layoutX="23.0" layoutY="114.0" prefHeight="422.0" prefWidth="634.0" style="-fx-background-color: ffffff;">
+               <children>
+                  <ComboBox fx:id="combobox" layoutX="55.0" layoutY="182.0" onAction="#selectModeTravail" prefHeight="33.0" prefWidth="204.0" />
+                  <TextField fx:id="inputTitre" layoutX="57.0" layoutY="108.0" prefHeight="33.0" prefWidth="204.0" />
+                  <Label layoutX="58.0" layoutY="83.0" prefHeight="25.0" prefWidth="61.0" text="Sujet *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="157.0" prefHeight="25.0" prefWidth="120.0" text="Mode de travail *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_retourStage" layoutX="6.0" layoutY="383.0" mnemonicParsing="false" onAction="#OnclickRetour" prefHeight="25.0" prefWidth="98.0" styleClass="btnAjouter" text="Retour" />
+                  <Button fx:id="btnSuivantStage" layoutX="518.0" layoutY="383.0" mnemonicParsing="false" onAction="#onclickSuivantStage" prefHeight="25.0" prefWidth="98.0" styleClass="btnAjouter" text="Suivant" />
+                  <Label layoutX="259.0" layoutY="14.0" prefHeight="42.0" prefWidth="204.0" text="Offre Freelancer">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="inputLieu" layoutX="55.0" layoutY="251.0" prefHeight="33.0" prefWidth="204.0" />
+                  <Label layoutX="55.0" layoutY="223.0" prefHeight="33.0" prefWidth="89.0" text="Lieu" />
+                  <TextField fx:id="inputDuree" layoutX="335.0" layoutY="108.0" prefHeight="33.0" prefWidth="204.0" />
+                  <Label layoutX="335.0" layoutY="83.0" prefHeight="25.0" prefWidth="61.0" text="Durée *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="inputDescription" layoutX="330.0" layoutY="251.0" prefHeight="91.0" prefWidth="215.0" />
+                  <Label layoutX="330.0" layoutY="223.0" prefHeight="33.0" prefWidth="89.0" text="Description" />
+                  <TextField fx:id="inputSalaire" layoutX="335.0" layoutY="182.0" prefHeight="33.0" prefWidth="204.0" />
+                  <Label layoutX="335.0" layoutY="157.0" prefHeight="25.0" prefWidth="113.0" text="Renumeration *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="280.0" prefHeight="33.0" prefWidth="113.0" text="Date d'expiration *" />
+                  <DatePicker fx:id="calender" editable="false" layoutX="57.0" layoutY="309.0" prefHeight="33.0" prefWidth="204.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</HBox>

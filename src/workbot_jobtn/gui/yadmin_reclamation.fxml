@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.Yadmin_reclamationController">
+   <children>
+      <ImageView fitHeight="572.0" fitWidth="982.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Listadminn.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="812.0">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchor_reclamation" layoutX="238.0" layoutY="6.0" prefHeight="534.0" prefWidth="627.0">
+               <children>
+                  <TableView fx:id="table_reclamation" layoutX="12.0" layoutY="179.0" onMouseClicked="#lineselected" prefHeight="336.0" prefWidth="446.0">
+                     <columns>
+                        <TableColumn fx:id="col_id" prefWidth="62.4000244140625" text="Référence" />
+                        <TableColumn fx:id="col_objet" prefWidth="48.0" text="Titre" />
+                        <TableColumn fx:id="col_date" prefWidth="56.0" text="Date" />
+                        <TableColumn fx:id="col_description" prefWidth="74.39990234375" text="Description" />
+                        <TableColumn fx:id="col_categorie" prefWidth="72.0" text="Catégorie" />
+                        <TableColumn fx:id="col_image" prefWidth="72.7999267578125" text="Image" />
+                        <TableColumn fx:id="col_etat" prefWidth="59.199951171875" text="Etat" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="tf_recherche" layoutX="337.0" layoutY="149.0" onAction="#rechercher" prefHeight="26.0" prefWidth="92.0" promptText="rechercher" />
+                  <ImageView fx:id="recherchericon" fitHeight="47.0" fitWidth="28.0" layoutX="431.0" layoutY="149.0" onMouseClicked="#recherchericon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/rechercher.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="retouricon" fitHeight="18.0" fitWidth="32.0" layoutX="315.0" layoutY="151.0" onMouseClicked="#retouricon" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../images/retouricon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="268.0" layoutY="517.0" opacity="0.42" text="selectionnez un item pour consulter" underline="true" />
+                  <ImageView fx:id="refreshicon" fitHeight="30.0" fitWidth="20.0" layoutX="12.0" layoutY="152.0" onMouseClicked="#refreshricon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/refresh.png" />
+                     </image>
+                  </ImageView>
+                  <Pane fx:id="pane_affichage" layoutX="459.0" layoutY="129.0" prefHeight="406.0" prefWidth="223.0" visible="false">
+                     <children>
+                        <Label layoutX="23.0" layoutY="27.0" text="Reference:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="126.0" text="Description:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="bt_traitee" layoutX="24.0" layoutY="361.0" mnemonicParsing="false" onAction="#traitee" text="enregistrer comme traitée" visible="false" />
+                        <Label layoutX="24.0" layoutY="233.0" text="Image:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="iv_imagea" fitHeight="82.0" fitWidth="130.0" layoutX="90.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="24.0" layoutY="60.0" text="Titre:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="93.0" text="Date:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab_description" alignment="TOP_LEFT" ellipsisString="" layoutX="90.0" layoutY="126.0" maxHeight="76.0" maxWidth="132.0" prefHeight="76.0" prefWidth="132.0" wrapText="true" />
+                        <Label layoutX="24.0" layoutY="200.0" text="Categorie:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="316.0" text="Etat:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab_reference" layoutX="90.0" layoutY="27.0" />
+                        <Label fx:id="lab_date" layoutX="90.0" layoutY="93.0" />
+                        <Label fx:id="lab_titre" layoutX="90.0" layoutY="60.0" />
+                        <Label fx:id="lab_categorie" layoutX="90.0" layoutY="200.0" />
+                        <Label fx:id="lab_etat" layoutX="90.0" layoutY="316.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="300.0" layoutY="14.0" prefHeight="122.0" prefWidth="129.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-color: #6c63ff;">
+                     <children>
+                        <Label fx:id="etat_encours" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="53.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="35.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Lucida Sans Unicode" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="88.0" prefHeight="19.0" prefWidth="69.0" text="Traitées:" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="58.0" prefHeight="19.0" prefWidth="69.0" text="En cours:" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="etat_traite" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="83.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="35.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Lucida Sans Unicode" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="-3.0" layoutY="-2.0" prefHeight="35.0" prefWidth="135.0" text="Etats" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="30.0" prefHeight="19.0" prefWidth="69.0" text="Envoyées:" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="etat_envoye" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="25.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="35.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Lucida Sans Unicode" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="68.0" layoutY="14.0" prefHeight="122.0" prefWidth="129.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-color: #6c63ff;">
+                     <children>
+                        <Label fx:id="cat_tech" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="35.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Lucida Sans Unicode" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="84.0" prefHeight="19.0" prefWidth="69.0" text="Offre:" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="48.0" prefHeight="19.0" prefWidth="69.0" text="Technique:" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cat_offre" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="35.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Lucida Sans Unicode" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="-3.0" layoutY="-2.0" prefHeight="35.0" prefWidth="135.0" text="Catégories" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="categories" layoutX="490.0" layoutY="46.0" mnemonicParsing="false" onAction="#Onclicked_categories" prefHeight="45.0" prefWidth="92.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Catégories" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="anchor_categorie" layoutX="215.0" layoutY="24.0" prefHeight="427.0" prefWidth="635.0" visible="false">
+               <children>
+                  <TableView fx:id="table_categorie" layoutX="68.0" layoutY="117.0" onMouseClicked="#lineselectedc" prefHeight="286.0" prefWidth="223.0">
+                     <columns>
+                        <TableColumn fx:id="col_idcat" prefWidth="62.4000244140625" text="Id" />
+                        <TableColumn fx:id="col_nom_categorie" prefWidth="124.0" text="Nom categorie" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="68.0" layoutY="409.0" opacity="0.42" text="selectionnez un item pour éditer" underline="true" />
+                  <ImageView fx:id="refreshiconc" fitHeight="30.0" fitWidth="20.0" layoutX="68.0" layoutY="89.0" onMouseClicked="#refreshriconc" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/refresh.png" />
+                     </image>
+                  </ImageView>
+                  <Pane fx:id="pane_affichage1" layoutX="313.0" layoutY="117.0" prefHeight="286.0" prefWidth="250.0">
+                     <children>
+                        <Button fx:id="bt_ajouter" layoutX="100.0" layoutY="65.0" mnemonicParsing="false" onAction="#Onclicked_bt_ajouter" text="ajouter" />
+                        <Label layoutX="14.0" layoutY="31.0" text="Nom categorie:">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tf_nomCategorie" layoutX="100.0" layoutY="27.0" prefHeight="25.0" prefWidth="143.0" />
+                        <Button fx:id="bt_supprimer" layoutX="172.0" layoutY="65.0" mnemonicParsing="false" onAction="#Onclicked_bt_supprimer" text="supprimer" visible="false" />
+                        <Button fx:id="bt_modifier" layoutX="100.0" layoutY="65.0" mnemonicParsing="false" onAction="#Onclicked_bt_modifier" text="modifier" visible="false" />
+                        <Button fx:id="bt_annuler" layoutX="99.0" layoutY="103.0" mnemonicParsing="false" onAction="#Onclicked_bt_annuler" text="annuler" visible="false" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="68.0" layoutY="41.0" text="Liste des catégories:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="champ_obligatoire" layoutX="561.0" layoutY="147.0" text="* champ obligatoire" textFill="RED" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="132.0" layoutY="78.0" mnemonicParsing="false" onAction="#On_reclamtion" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Reclamations" textFill="#6c63ff" />
+      <Button layoutX="132.0" layoutY="141.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #6c63ff; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="List Admin" textFill="WHITE" />
+      <Button fx:id="M_listclientLS" layoutX="132.0" layoutY="210.0" mnemonicParsing="false" onAction="#ListClient" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="List Client" textFill="#6c63ff" />
+      <Button fx:id="Stat" layoutX="132.0" layoutY="281.0" mnemonicParsing="false" onAction="#M_statbutton" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Statistique" textFill="#6c63ff" />
+      <Button layoutX="132.0" layoutY="345.0" mnemonicParsing="false" onAction="#cours_open" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #6c63ff; -fx-border-radius: 5;" text="Cours" textFill="#6c63ff" />
+      <Button fx:id="M_logoutLAid" layoutX="105.0" layoutY="24.0" mnemonicParsing="false" onAction="#M_logoutLAaction" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-radius: 6;" text="Logout">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

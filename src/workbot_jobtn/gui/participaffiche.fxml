@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.ParticipafficheController">
+   <children>
+      <TableView fx:id="HTABV1" layoutX="169.0" layoutY="80.0" onMouseClicked="#remplire_update" prefHeight="370.0" prefWidth="727.0">
+         <columns>
+            <TableColumn fx:id="aff_datedb1" prefWidth="75.0" text="Date debut" />
+            <TableColumn fx:id="aff_datefin1" prefWidth="75.0" text="Date Fin" />
+            <TableColumn fx:id="aff_lib1" prefWidth="76.0" text="Libelle" />
+            <TableColumn fx:id="aff_heuredb1" prefWidth="79.20002746582031" text="Heure Debut" />
+            <TableColumn fx:id="aff_heurefin1" prefWidth="63.199951171875" text="Heure Fin" />
+            <TableColumn fx:id="aff_nbplc1" prefWidth="60.0" text="N°Places " />
+            <TableColumn fx:id="aff_prix1" prefWidth="84.0" text="Prix d'entrée" />
+            <TableColumn fx:id="aff_flyer1" prefWidth="108.79998779296875" text="Flyer" />
+            <TableColumn fx:id="aff_video1" minWidth="0.0" prefWidth="105.0" text="Video" />
+            <TableColumn fx:id="idev" prefWidth="176.7999267578125" text="ID" visible="false" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="559.0" fitWidth="161.0" layoutX="-3.0" layoutY="-7.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-3.0" AnchorPane.topAnchor="-7.0">
+         <image>
+            <Image url="@309718047_3247791828796491_6017093170681667861_n.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Button layoutX="13.0" layoutY="200.0" mnemonicParsing="false" onAction="#annulerpart" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="Your Events" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnajpart" layoutX="745.0" layoutY="492.0" mnemonicParsing="false" onAction="#btn_ajpart" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-background-color: #4848e2;" text="Participer" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="retourpart" layoutX="179.0" layoutY="492.0" mnemonicParsing="false" onAction="#retourpartev" prefHeight="40.0" prefWidth="132.0" styleClass="btnAjouter" stylesheets="@homesociete.css" text="RETOUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="alertparticipaff" layoutX="245.0" layoutY="482.0" prefHeight="18.0" prefWidth="494.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="homepartaff" layoutX="14.0" layoutY="148.0" mnemonicParsing="false" onAction="#doclickhomepartaff" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="168.0" fitWidth="161.0" layoutX="-3.0" layoutY="-7.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@308181173_3429967987279219_7821870094501611281_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="eventsrefrech" layoutX="13.0" layoutY="252.0" mnemonicParsing="false" onAction="#doclickeventsrefrech" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #8D87F0; -fx-background-radius: 20;" text="Events List" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchinput" layoutX="727.0" layoutY="28.0" />
+      <Label layoutX="643.0" layoutY="31.0" prefHeight="20.0" prefWidth="74.0" text="Rechercher">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

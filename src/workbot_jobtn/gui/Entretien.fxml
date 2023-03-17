@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workbot_jobtn.gui.EntretienController">
+   <children>
+      <Label layoutX="108.0" layoutY="27.0" prefHeight="45.0" prefWidth="279.0" text="Proposez un entretien a ce candidat">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateMeet" layoutX="50.0" layoutY="118.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField fx:id="lienMeet" layoutX="123.0" layoutY="194.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button fx:id="envoyerMail" layoutX="123.0" layoutY="242.0" mnemonicParsing="false" onAction="#onclickEnvoyerMail" prefHeight="25.0" prefWidth="174.0" text="Informer par E-mail" />
+      <Label layoutX="50.0" layoutY="93.0" prefHeight="25.0" prefWidth="92.0" text="Choisir une date" />
+      <Label layoutX="123.0" layoutY="169.0" prefHeight="25.0" prefWidth="208.0" text="Lien de reunion (Exp: Google Meet)" />
+      <Spinner fx:id="heureMeet" editable="true" layoutX="230.0" layoutY="118.0" prefHeight="25.0" prefWidth="133.0" />
+      <Label layoutX="230.0" layoutY="93.0" prefHeight="25.0" prefWidth="107.0" text="Choisir une heure" />
+      <ImageView fitHeight="55.0" fitWidth="57.0" layoutX="19.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/3391910.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
